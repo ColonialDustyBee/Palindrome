@@ -8,7 +8,7 @@ using namespace std;
 class Palindrome
 {
 private:
-	int stringIndex = 0; // meant to track track of individual string.
+	int stringIndex = 0; // meant to track individual string index.
 	bool gotLength = false;
 	bool isAPalindrome = false;
 	int sizeOfWord = 0;
