@@ -12,7 +12,7 @@ private:
 	bool gotLength = false;
 	bool isAPalindrome = false;
 	int sizeOfWord = 0;
-	string reversed = "", oldWord = "";
+	string reversed = "";
 	int returnLength(string);
 public:
 	Palindrome();
