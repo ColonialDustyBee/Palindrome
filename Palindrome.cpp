@@ -9,9 +9,10 @@ int Palindrome::returnLength(string word) { // Private member function
 }
 void Palindrome::isPalindrome(string word) {
 	if (!gotLength) { // This should only be called once.
-		sizeOfWord = returnLength(word); // Should call function
+		sizeOfWord = returnLength(word); // Should call private member function
 		reversed = string(word.rbegin(), word.rend()); // meant to save the reversed word since w = w^R
 	}
+	// Base Case
 	if (sizeOfWord == 0) {
 		if (isAPalindrome == false) {
 			cout << word << " is not a palindrome!" << endl;
@@ -20,17 +21,17 @@ void Palindrome::isPalindrome(string word) {
 			cout << word << " is a palindrome!" << endl;
 		}
 	}
-	// Base case
-	if (word[stringIndex] == reversed[stringIndex]) { // Going from end to beginning, if it isn't 
-		isAPalindrome = true; // ends when it is 0
+	// General Case - meant to evaluate the string.
+	if (word[stringIndex] == reversed[stringIndex]) { // Going from end to beginning, if it is equal to each other, it should make bool value true.
+		isAPalindrome = true; // ends when sizeOfWord is 0
 	}
 	else {
-		isAPalindrome = false;
+		isAPalindrome = false; // ends when sizeOfWord is 0
 	}
 	// Recursive Case  
 	if (sizeOfWord > 0) {
 		stringIndex++; // increases index.
-		sizeOfWord--; // it should call here but it isn't??? what the fuck??
+		sizeOfWord--; 
 		isPalindrome(word); // calls function again
 	}
 	
